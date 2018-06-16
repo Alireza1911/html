@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Tamrin2</title>
+    <link href="Tamrin2.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+</head>
+<body>
+    <div id="header">
+        <spam id="stinf">اطلاعات دانشجو</spam>
+        <button class="stnew"id="clinfo">پاک کردن اطلاعات</button>
+        <button class="stnew" id="creat">دانشجو جدید</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th id="id">شناسه<i class="fas fa-caret-up" onclick="sort('idso')"></i><i class="fas fa-caret-down"onclick="sort('idno')"></i></th>
+                <th id="name">نام<i class="fas fa-caret-up" onclick="sort('nameso')"></i><i class="fas fa-caret-down"onclick="sort('nameno')"></i></th>
+                <th id="family">نام خانوادگی<i class="fas fa-caret-up"onclick="sort('lnameso')"></i><i class="fas fa-caret-down"onclick="sort('lnameno')"></i></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="modal_tbody"></tbody>
+    </table>
+    <div id="bmodal">
+        <div id="modal">
+            <div id="modal1">
+                <div>
+                    <div id="close"><i class="fas fa-window-close" id="close1"></i></div>
+                    <h2>ثبت دانشجو جدید</h2>
+                </div>
+            </div>
+            <div id="modal2">
+                <form id="formaraye">
+                    <p>نام:</p>
+                    <input type="text" name="name" />
+                    <p>نام خانوادگی:</p>
+                    <input type="text" name="family" style="margin-bottom:20px" />
+                </form>
+            </div>
+            <div id="modal3">
+                <button class="info" onclick="closemodal()">لغو</button>
+                <button class="info" id="zakhire">ذخیره</button>
+                <button class="info" id="virayesh">ویرایش</button>
+            </div>
+        </div>
+    </div>
+    <script src="Tamrin2.js"></script>
+</body>
+</html>
