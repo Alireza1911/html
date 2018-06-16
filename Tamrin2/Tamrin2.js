@@ -131,7 +131,7 @@ document.getElementById("clinfo").onclick = function () {
     num = 1;
     tbody();
 }
-//مرتب سازی صعودی ای دی
+//مرتب سازی 
 function sort(prop) {
     switch (prop) {
         case 'idso':
