@@ -31,20 +31,22 @@ document.getElementById("zakhire").onclick =
         debugger;
         var objstu = new studentpro(num, formin[0].value, formin[1].value);
         student.push(objstu);
+        localStorage.setItem("lastnum", num + 1);
         save_loc();
         tbody();
         closemodal();
     }
 //ذخیره اطلاعات در لوکال استوریج
 function save_loc() {
+    debugger;
     if (Storage !== 'undefinded') {
-        localStorage.setItem('lastnum', num + 1);
         if (localStorage.student) {
             localStorage.removeItem('student');
             localStorage.setItem('student', JSON.stringify(student));
         }
         else {
             localStorage.setItem('student', JSON.stringify(student));
+            localStorage.setItem('lastnum', num + 1);
         }
         get_loc();
     }
@@ -133,10 +135,11 @@ document.getElementById("clinfo").onclick = function () {
 }
 //مرتب سازی 
 function sort(prop) {
+    debugger;
     switch (prop) {
         case 'idso':
             for (var x = student.length; x > 1; x--) {
-                for (var j = 0; j < x - 1; j++) {
+                for (var j = 0; j < x-1 ; j++) {
                     if (student[j].id > student[j + 1].id) {
                         var temp = student[j];
                         student[j] = student[j + 1];
@@ -150,7 +153,7 @@ function sort(prop) {
             break;
         case 'idno':
             for (var x = student.length; x > 1; x--) {
-                for (var j = 0; j < x - 1; j++) {
+                for (var j = 0; j < x-1 ; j++) {
                     if (student[j].id < student[j + 1].id) {
                         var temp = student[j];
                         student[j]= student[j + 1];
@@ -164,7 +167,7 @@ function sort(prop) {
             break;
         case 'nameso':
             for (var x = student.length; x > 1; x--) {
-                for (var j = 0; j < x - 1; j++) {
+                for (var j = 0; j < x-1 ; j++) {
                     if (student[j].fname > student[j + 1].fname) {
                         var temp = student[j];
                         student[j] = student[j + 1];
@@ -177,8 +180,8 @@ function sort(prop) {
             tbody();
             break;
         case 'nameno':
-            for (var x = student.length; x > 1; x--) {
-                for (var j = 0; j < x - 1; j++) {
+            for (var x = student.length; x >1; x--) {
+                for (var j = 0; j < x-1 ; j++) {
                     if (student[j].fname < student[j + 1].fname) {
                         var temp = student[j];
                         student[j] = student[j + 1];
@@ -192,7 +195,7 @@ function sort(prop) {
             break;
         case 'lnameso':
             for (var x = student.length; x > 1; x--) {
-                for (var j = 0; j < x - 1; j++) {
+                for (var j = 0; j < x-1 ; j++) {
                     if (student[j].lname > student[j + 1].lname) {
                         var temp = student[j];
                         student[j] = student[j + 1];
@@ -206,7 +209,7 @@ function sort(prop) {
             break;
         case 'lnameno':
             for (var x = student.length; x > 1; x--) {
-                for (var j = 0; j < x - 1; j++) {
+                for (var j = 0; j < x-1 ; j++) {
                     if (student[j].lname < student[j + 1].lname) {
                         var temp = student[j];
                         student[j] = student[j + 1];
