@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>slidshow</title>
+    <link href="StyleSheet1.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+</head>
+<body>
+    <h1>slide show</h1>
+    <div class="imageinner">
+        <img class="image" id="image1" src="image/img_fjords.jpg" alt="fjords" />
+        <img class="image" id="image2" src="image/img_lights.jpg" alt="lights" />
+        <img class="image" id="image3" src="image/img_mountains.jpg" alt="mountains" />
+        <img class="image" id="image4" src="image/img_nature.jpg" alt="nature" />
+    </div>
+    <div id="basemodal">
+
+        <div id="close"><i class="fas fa-times" id="closeicon"></i></div>
+        <div id="slide">
+            <p id="p"></p>
+            <img id="imageslide"/>
+            <i id="right" class="fas fa-angle-right"></i>
+            <i id="left" class="fas fa-angle-left"></i>
+        </div>
+        <label id="lab">fjords</label>
+        <div class="imageinner">
+            <img class="image" id="image-modal-1" src="image/img_fjords.jpg" alt="fjords" style="opacity:0.2" />
+            <img class="image" id="image-modal-2" src="image/img_lights.jpg" alt="lights" style="opacity:0.2" />
+            <img class="image" id="image-modal-3" src="image/img_mountains.jpg" alt="mountains" style="opacity:0.2"/>
+            <img class="image" id="image-modal-4" src="image/img_nature.jpg" alt="nature" style="opacity:0.2"/>
+        </div>
+
+    </div>
+
+    <script src="JavaScript.js"></script>
+</body>
+</html>
